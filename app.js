@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json({ limit: '500mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 app.use(cors({
-  origin: 'https://find-room.vercel.app',
+  origin: ['https://find-room.vercel.app', 'http://localhost:3000'],
   methods: 'GET,POST,PUT,DELETE',
   allowedHeaders: 'Content-Type,Authorization',
 }));
